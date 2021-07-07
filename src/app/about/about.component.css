@@ -1,0 +1,17 @@
+*
+{
+  color: white;
+}
+
+img
+{
+  margin-top: 150px;
+  width: 700px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+.row
+{
+  display: flex;
+  justify-content: center;
+}

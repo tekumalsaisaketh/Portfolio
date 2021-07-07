@@ -1,0 +1,46 @@
+<div class="container" id="main" style="position: absolute; top:150px;color: white;" *ngIf="notsubmitted">
+  <h4 id="hello">Hello! Let's work together.</h4>
+  <form #form="ngForm">
+    <div class="row" id="name">
+        <div class="form-group col-md-5">
+          <input id="my-input" #fname="ngModel" [class.is-invalid]="fname.invalid&&fname.touched" required class="form-control" autocomplete="off" type="text" name="first name"
+            placeholder="First name" [(ngModel)]="UserInfo.firstname">
+            <small *ngIf="fname.invalid&&fname.touched" style="color: red;">First Name is required</small>
+        </div>
+        <div class="form-group col-md-5">
+          <input id="my-input" required class="form-control" [class.is-invalid]="sname.invalid&&sname.touched"
+            #sname="ngModel" autocomplete="off" type="text" name="last name"
+            placeholder="Second name" [(ngModel)]="UserInfo.lastname">
+            <small *ngIf="sname.invalid&&sname.touched" style="color: red;">Second Name is required</small>
+        </div>
+    </div>
+    <div class="row" id="details">
+    <div class="form-group col-md-5" id="email">
+      <input required class="form-control" #mail="ngModel" 
+        [class.is-invalid]="mail.invalid&&mail.touched"
+         autocomplete="off" type="text" name="email"
+        placeholder="Email Address" [(ngModel)]="UserInfo.email">
+        <small *ngIf="(mail.invalid&&mail.touched)"
+          style="color: rgb(214, 49, 49);">Email is required</small>
+          <!-- <small *ngIf="mail.errors?.pattern" style="color: rgb(214, 49, 49)">Invalid Email Address</small> -->
+    </div>
+    <div class="form-group col-md-5">
+      <textarea id="projectDetails" class="form-control" required #project="ngModel"
+        [class.is-invalid]="project.invalid&&project.touched"
+          autocomplete="off"
+        type="text" name="projectDetails"
+        placeholder="Project description" [(ngModel)]="UserInfo.projectdetails"></textarea>
+      <small *ngIf="project.invalid&&project.touched" style="color: rgb(214, 49, 49);">Project Details are required</small>
+      
+    </div>
+    </div>
+
+    <button [disabled]="form.form.invalid" class="btn btn-outline-light" id="submit" (click)="onSubmit()" >Send Request</button>
+    
+    
+    
+  </form>
+</div>
+<div *ngIf="!notsubmitted" id="success">
+    <h3>Successfully submitted</h3>
+</div>

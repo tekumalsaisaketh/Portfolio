@@ -1,0 +1,72 @@
+*
+{
+  color: white;
+}
+#hello
+{
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
+#name
+{
+  display: flex;
+  justify-content:space-around;
+
+}
+#details
+{
+  display: flex;
+  justify-content:space-around;
+  margin-bottom: 40px;
+}
+
+form
+{
+  color: white;
+}
+.form-group
+{
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 600px) {
+  #main
+  {
+    left: 50px;
+  }
+  #submit
+  {
+    position: absolute;
+    left: 10px;
+  }
+}
+
+#projectDetails
+{
+  height: 100px;
+}
+input {
+  background-color: rgb(63, 61, 61);
+}
+textarea
+{
+  background-color: rgb(63, 61, 61);
+}
+#submit
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 75px;
+  
+}
+#success
+{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 75vh;
+  
+}
